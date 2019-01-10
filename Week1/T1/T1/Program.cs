@@ -9,39 +9,41 @@ namespace Task1
     class Program
     {
 
-        static bool Prime(int n)
+        static bool Prime(int n) //it will check nuber is prime or not
         {
-            if (n == 0 || n == 1)
+            if (n == 0 || n == 1) // if number is equal to 0 and 1, it is not prime. So function will continue.
             {
                 return false;
             }
-            for (int i = 2; i <= Math.Sqrt(n); i++)
+            for (int i = 2; i <= Math.Sqrt(n); i++) // Here we use rule of primes.
             {
 
-                if (n % i == 0)
+                if (n % i == 0) // if n divides to i, the function will continue.
                 {
                     return false;
                 }
             }
-            return true;
+            return true; // in other case it is prime
         }
 
         static void Main(string[] args)
         {
-            int cnt = 0;
-            string s = Console.ReadLine();
-            string[] s1 = Console.ReadLine().Split();
+            int cnt = 0; // number of primes
+            string s = Console.ReadLine();// string
+            string[] s1 = Console.ReadLine().Split();// enters an array by splitting spaces from the line
 
-            int n = int.Parse(s);
+            int n = int.Parse(s); // enters line by converting string to integer
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) // for every index
             {
-                if (Prime(int.Parse(s1[i]))) cnt++;
+                if (Prime(int.Parse(s1[i]))) // if 
+                    cnt++; // counts number of primes
             }
-            Console.WriteLine(cnt);
-            for (int i = 0; i < n; i++)
+            Console.WriteLine(cnt); // shows number of primes
+            for (int i = 0; i < n; i++) // for each index
             {
-                if (Prime(int.Parse(s1[i]))) Console.Write(s1[i] + " "); // shows how many primes there
+                if (Prime(int.Parse(s1[i]))) // if function is true
+                    Console.Write(s1[i] + " "); // shows prime numbers
             }
         }
     }
