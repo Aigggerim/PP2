@@ -41,7 +41,7 @@ namespace Task1
             Console.WriteLine(cnt);
             for (int i = 0; i < n; i++)
             {
-                if (Prime(int.Parse(s1[i]))) Console.Write(s1[i] + " ");
+                if (Prime(int.Parse(s1[i]))) Console.Write(s1[i] + " "); // shows how many primes there
             }
         }
     }
