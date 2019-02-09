@@ -9,7 +9,7 @@ namespace Task1
     class Program
     {
 
-        static bool Prime(int n) //it will check nuber is prime or not
+        static bool Prime(int n) //it will check number is prime or not
         {
             if (n == 0 || n == 1) // if number is equal to 0 and 1, it is not prime. So function will continue.
             {
@@ -36,7 +36,7 @@ namespace Task1
 
             for (int i = 0; i < n; i++) // for every index
             {
-                if (Prime(int.Parse(s1[i]))) // if 
+                if (Prime(int.Parse(s1[i]))) // if it is true
                     cnt++; // counts number of primes
             }
             Console.WriteLine(cnt); // shows number of primes

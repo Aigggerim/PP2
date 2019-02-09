@@ -10,11 +10,11 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            string[] a = Console.ReadLine().Split(' ');
-            for (int i = 0; i < n; i++)
+            int n = int.Parse(Console.ReadLine()); // enters line by converting string to integer
+            string[] a = Console.ReadLine().Split(' '); // enters an array by splitteing spaces from the line
+            for (int i = 0; i < n; i++) // for each index
             {
-                Console.Write(a[i] + ' ' + a[i] + ' ');
+                Console.Write(a[i] + ' ' + a[i] + ' '); // shows every number twice
             }
         }
     }
