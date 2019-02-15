@@ -3,33 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Task1
 {
     class Program
     {
-        public static bool Pal(string s)
+        static void Main(string[] args)
         {
-            for (int i = 1, j = s.Length - 1; i < j; i++, j--)
+            string s = Console.ReadLine();
+            File.WriteAllText(@"C:\Users\Acer\Desktop\example\lab2_1.txt", s);
+            FileStream a = new FileStream(@"C:\Users\Acer\Desktop\example\lab2_1.txt", FileMode.OpenOrCreate, FileAccess.Read);
+            StreamReader b = new StreamReader(a);
+            string st = b.ReadLine();
+            b.Close();
+            a.Close();
+            int cnt = 0;
+            for (int i = 0, j = st.Length - 1; i < st.Length && j >= 0; i++, j--)
             {
+                if (st[i] == st[j])
+                    cnt++;
+            }
 
-                if (s[i] != s[j])
-                    return false;
+                    if (cnt==st.Length)
+                {
+                    Console.Write("Yes");
+                }
+                else
+                {
+
+                    Console.Write("No");
+
+                }
             }
-            return true;
         }
-            static void Main(string[] args)
-        {
-            string text = File.ReadAllText(@"C:\Users\Acer\Desktop\lab2_1.txt");
-            if (Pal(lab2_1.txt))
-            {
-                Console.WriteLine("Yes");
-            }
-            else
-            {
-                Console.WriteLine("No");
-            }
-                Console.ReadKey();
-            }
     }
-}
