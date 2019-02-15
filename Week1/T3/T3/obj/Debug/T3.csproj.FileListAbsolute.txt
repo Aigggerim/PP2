@@ -1,7 +1,0 @@
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\bin\Debug\T3.exe.config
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\bin\Debug\T3.exe
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\bin\Debug\T3.pdb
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\obj\Debug\T3.csprojAssemblyReference.cache
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\obj\Debug\T3.csproj.CoreCompileInputs.cache
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\obj\Debug\T3.exe
-C:\Users\Acer\Desktop\Progr2\Week1\T3\T3\obj\Debug\T3.pdb
