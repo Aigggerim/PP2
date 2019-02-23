@@ -67,6 +67,7 @@ namespace Task1
             foreach (var t in Items)
             {
                 if (t is FileInfo)//if element is file
+
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;//foreground is yellow
                     if (i == selectedItemIndex)
@@ -142,7 +143,9 @@ namespace Task1
 
                 }
             }
-            Console.ReadKey();
+           
+
+                Console.ReadKey();
         }
     }
 }

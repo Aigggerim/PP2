@@ -14,27 +14,27 @@ namespace task3
             {
                 Console.Write(" ");
             }
-        }
-        public static void Way(DirectoryInfo d, int l) {
-            foreach (FileInfo f in d.GetFiles())   // if it is element of directory lead out it
-            {
-                Lev(l);
-                Console.WriteLine(f.Name);
 
-            
+
         }
-            foreach (DirectoryInfo di in d.GetDirectories())
+        public  static void T(DirectoryInfo dir,int lvel)
+        {
+           foreach(FileInfo fi in dir.GetFiles())
             {
-                Lev(l);
-                Console.WriteLine(di.Name); // write name 
-                Way(di, l + 1);
-          
+                Lev(lvel);
+                Console.WriteLine(fi.Name);
+            }
+           foreach(DirectoryInfo di in dir.GetDirectories())
+            {
+                Lev(lvel);
+                Console.WriteLine(di.Name);
+                T(di, lvel + 1);
             }
         }
         static void Main(string[] args)
         {
             DirectoryInfo d = new DirectoryInfo(@"C:\Users\Acer\Desktop\Progr2"); // open file
-            Way(d, 0); // will lead out tree with 2 dimensions
+            T(d, 0); // will lead out tree with 2 dimensions
         }
     }
 }
